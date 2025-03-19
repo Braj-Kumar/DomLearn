@@ -26,7 +26,7 @@ btn.addEventListener("click",()=>{
 
 
 // ---------------------- Like Page----------------------------------------
-
+/*
 
 var card = document.querySelector("#card");
 // var a = document.querySelector("h3");
@@ -57,3 +57,37 @@ btn.addEventListener("click",()=>{
 //     b.innerHTML = "Stranger";
 //     b.style.color = "red";
 // })
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+//------------------------ 3rd ----------------------
+
+
+
+const container = document.querySelector("#sub");
+const love = document.querySelector("i");
+
+
+container.addEventListener("click",()=>{
+    love.style.transform = "translate(-50%,-50%) scale(1)";
+    love.style.opacity = 0.8;
+    love.style.color = "red";
+
+    setTimeout(function (){
+        love.style.opacity = 0;
+    },1000);
+
+    setTimeout(()=>{
+        love.style.transform = "translate(-50%,-50%) scale(1)"
+    },2000)
+})
