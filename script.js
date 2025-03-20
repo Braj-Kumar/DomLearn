@@ -71,7 +71,7 @@ btn.addEventListener("click",()=>{
 
 
 //------------------------ 3rd ----------------------
-
+/*
 
 
 const container = document.querySelector("#sub");
@@ -90,4 +90,74 @@ container.addEventListener("click",()=>{
     setTimeout(()=>{
         love.style.transform = "translate(-50%,-50%) scale(1)"
     },2000)
+})
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ----------------------- 4th Cursor ------------
+
+/*
+const container = document.querySelector("#container");
+const crsr = document.querySelector("#cursor");
+
+
+container.addEventListener("mousemove", function (dets) {
+    crsr.style.left = dets.clientX + "px";
+    crsr.style.top = dets.clientY + "px";
+});
+*/
+
+
+
+// -----------------------  5th Cursor moving
+
+
+// const elem1 = document.querySelector("#elem1");
+
+// const elemImg = document.querySelector("#elem1 img");
+
+// elem1.addEventListener("mousemove",(event)=>{
+//         elemImg.style.left = event.x+"px";
+//         // elem1.style.top = event.y+"px";
+// })
+
+// elem1.addEventListener("mouseenter",(event)=>{
+//     elemImg.style.opacity = 1;
+// })
+
+// elem1.addEventListener("mouseleave",(event)=>{
+//     elemImg.style.opacity = 0;
+// })
+
+
+
+const elem  =  document.querySelectorAll(".elem");
+
+elem.forEach((event)=>{
+    // console.log(event)
+    // console.log(event.childNodes[3]) --- image dega 
+    event.addEventListener("mouseenter",function(){
+        event.childNodes[3].style.opacity =1;
+    })
+
+    event.addEventListener("mouseleave",function(){
+        event.childNodes[3].style.opacity = 0;
+    })
+
+    event.addEventListener("mousemove",function(val){
+        event.childNodes[3].style.left = val.x + "px";
+        // event.childNodes[3].style.top = val.y + "px";
+    })
 })

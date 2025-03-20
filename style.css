@@ -81,6 +81,7 @@
 
 /* --------------------  3rd ----------------- */
 
+/*
 
 .container{
     height: 100vh;
@@ -118,5 +119,130 @@
     left: 50%;
     transform: translate(-50%,-50%) scale(0);
     /* opacity: 0; */
-    transition: all ease 0.5s;
+    /* transition: all ease 0.5s;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------  4th Cursor moving */
+*
+/* 
+#container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    position: relative;
+}
+
+#cursor {
+    position: absolute; 
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    pointer-events: none; 
+    transition: transform 0.1s linear, width 0.3s ease, height 0.3s ease;
+}
+
+
+h1{
+    font-size: 9vw;
+    font-weight: 900;
+    color: white;
+}
+
+h1:hover ~ #cursor {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+#cursor {
+    animation: pulse 1.5s infinite ease-in-out;
+} */
+
+
+
+
+
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;  /* Full height of the screen */
+    background-color: #111;
+    color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.elem {
+    height: 200px;  /* Adjusted height for better layout */
+    width: 100%;
+    border-bottom: 5px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.elem h1 {
+    font-size: 4vw;  /* Reduced size for better readability */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 9;
+    mix-blend-mode: difference;
+}
+
+.elem img {
+    height: 120px;  /* Increased size */
+    width: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    opacity: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1280px) {  /* For smaller screens */
+    .elem h1 {
+        font-size: 5vw;
+    }
+    .elem img {
+        height: 100px;
+        width: 100px;
+    }
 }
