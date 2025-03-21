@@ -192,7 +192,7 @@ h1:hover ~ #cursor {
 
 
 
-
+/* 
 * {
     margin: 0;
     padding: 0;
@@ -201,7 +201,7 @@ h1:hover ~ #cursor {
 
 .container {
     width: 100%;
-    height: 100vh;  /* Full height of the screen */
+    height: 100vh; 
     background-color: #111;
     color: #fff;
     position: relative;
@@ -210,7 +210,7 @@ h1:hover ~ #cursor {
 }
 
 .elem {
-    height: 200px;  /* Adjusted height for better layout */
+    height: 200px;  
     width: 100%;
     border-bottom: 5px solid white;
     display: flex;
@@ -220,29 +220,104 @@ h1:hover ~ #cursor {
 }
 
 .elem h1 {
-    font-size: 4vw;  /* Reduced size for better readability */
+    font-size: 4vw;  
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     z-index: 9;
     mix-blend-mode: difference;
 }
 
 .elem img {
-    height: 120px;  /* Increased size */
-    width: 120px;
+    height: 120px;  
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
     position: absolute;
     opacity: 0;
-}
+} 
 
-/* Responsive Design */
-@media (max-width: 1280px) {  /* For smaller screens */
-    .elem h1 {
+
+@media (max-width: 1280px) {  For smaller screens
+   .elem h1 {
         font-size: 5vw;
     }
     .elem img {
         height: 100px;
         width: 100px;
     }
+}  */
+
+
+
+
+
+/* ------------------------   5th ----------- */
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#card{
+    height: 480px;
+    width: 350px;
+    border-radius: 10px;
+    border: 3px solid black;
+    background-color: #fff;
+    position: relative;
+}
+
+#storiyan{
+    height: 120px;
+    width: 100%;
+    border-bottom: 1px solid #dadada;
+    padding: 15px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+   
+}
+
+#storiyan::-webkit-scrollbar{
+    display: none;
+}
+
+.story{
+    border: 3px solid red;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.story img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#fullscreen{
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    display: none;
 }

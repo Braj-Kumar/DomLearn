@@ -141,7 +141,7 @@ container.addEventListener("mousemove", function (dets) {
 //     elemImg.style.opacity = 0;
 // })
 
-
+/*
 
 const elem  =  document.querySelectorAll(".elem");
 
@@ -161,3 +161,96 @@ elem.forEach((event)=>{
         // event.childNodes[3].style.top = val.y + "px";
     })
 })
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+// -----------------------------  5th story -------------------
+
+
+
+
+
+
+
+// var arr = [1,2,3,4];
+// var str = "";
+// arr.forEach((elem)=>{
+//     str+=elem;
+// })
+// console.log(str);
+
+
+var arr = [
+    {dp:"https://deepgram.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F96965%2F1728565729-best-local-coding-llm-thumbnail.png&w=3840&q=75",
+        story:"https://media.istockphoto.com/id/1224500457/photo/programming-code-abstract-technology-background-of-software-developer-and-computer-script.jpg?b=1&s=612x612&w=0&k=20&c=zhGJ4vjUOGBD9VjpGuiPPnt6ehae9_rVgCYifyVnBFk="
+    },
+
+    {
+        dp:"https://cdn.pixabay.com/photo/2023/06/25/08/46/woman-8086721_640.jpg",
+        story:"https://plus.unsplash.com/premium_photo-1727942419945-1908baae3c8e?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFsZSUyMG1vZGVsfGVufDB8fDB8fHww"
+    },
+
+    {
+        dp:"https://media.istockphoto.com/id/483447665/photo/cricket-batsman-hero.jpg?s=612x612&w=0&k=20&c=r2Y5_fbMATDukkvUH2gXDL7Go3DNyimr8GV_u0SfBXM=",
+        story:"https://img1.hscicdn.com/image/upload/f_auto/lsci/db/PICTURES/CMS/398100/398114.jpg"
+    },
+
+    {dp:"https://deepgram.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F96965%2F1728565729-best-local-coding-llm-thumbnail.png&w=3840&q=75",
+        story:"https://media.istockphoto.com/id/1224500457/photo/programming-code-abstract-technology-background-of-software-developer-and-computer-script.jpg?b=1&s=612x612&w=0&k=20&c=zhGJ4vjUOGBD9VjpGuiPPnt6ehae9_rVgCYifyVnBFk="
+    },
+
+    {
+        dp:"https://cdn.pixabay.com/photo/2023/06/25/08/46/woman-8086721_640.jpg",
+        story:"https://plus.unsplash.com/premium_photo-1727942419945-1908baae3c8e?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFsZSUyMG1vZGVsfGVufDB8fDB8fHww"
+    },
+
+    {
+        dp:"https://media.istockphoto.com/id/483447665/photo/cricket-batsman-hero.jpg?s=612x612&w=0&k=20&c=r2Y5_fbMATDukkvUH2gXDL7Go3DNyimr8GV_u0SfBXM=",
+        story:"https://img1.hscicdn.com/image/upload/f_auto/lsci/db/PICTURES/CMS/398100/398114.jpg"
+    }
+    
+]
+
+
+const storiya = document.querySelector("#storiyan");
+
+
+var clutter = "";
+arr.forEach(function(elem,index){
+    // console.log(elem,index)
+    
+    clutter+=` <div class="story" >
+    <img id="${index}" src="${elem.dp}" alt="">
+    </div> `
+})
+
+storiya.innerHTML = clutter;
+
+
+const fullscreen = document.querySelector("#fullscreen");
+storiya.addEventListener("click",function(dets){
+        // console.log(arr[dets.target.id].story);
+
+        fullscreen.style.display = "block";
+        fullscreen.style.backgroundImage = `url(${arr[dets.target.id].story})`
+
+        
+
+    setTimeout(()=>{
+        fullscreen.style.display = "none";
+    },3000)
+})
+
+
